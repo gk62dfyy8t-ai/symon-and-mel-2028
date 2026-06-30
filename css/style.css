@@ -25,6 +25,24 @@ font-weight:bold;
 }
 .nav-links a:hover{background:#fff;color:#0b77b8}
 
+/* ---------- Mobile Menu Button ---------- */
+
+.menu-toggle{
+
+    display:none;
+
+    background:none;
+
+    border:none;
+
+    color:white;
+
+    font-size:2rem;
+
+    cursor:pointer;
+
+}
+
 .hero{
 min-height:100vh;
 display:flex;
@@ -213,29 +231,131 @@ padding:140px 30px 80px;
 
 @media (max-width:768px){
 
-/* NAVIGATION */
+/* ---------- Navigation ---------- */
 
 .navbar{
 
-padding:15px;
+    justify-content:flex-end;
+
+    align-items:center;
+
+    padding:15px 20px;
+
+}
+
+.menu-toggle{
+
+    display:block;
+
+    background:none;
+
+    border:none;
+
+    color:white;
+
+    font-size:2rem;
+
+    cursor:pointer;
+
+    z-index:1001;
 
 }
 
 .nav-links{
 
-flex-wrap:wrap;
+    position:absolute;
 
-justify-content:center;
+    top:70px;
 
-gap:10px;
+    right:15px;
+
+    width:260px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:stretch;
+
+    gap:8px;
+
+    list-style:none;
+
+    margin:0;
+
+    padding:15px;
+
+    border-radius:18px;
+
+background:rgba(15,25,40,.92);
+
+backdrop-filter:blur(16px);
+
+border:1px solid rgba(255,255,255,.12);
+
+    box-shadow:0 10px 25px rgba(0,0,0,.25);
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transform:translateY(-15px);
+
+    transition:all .3s ease;
+
+}
+
+.nav-links.active{
+
+    opacity:1;
+
+    visibility:visible;
+
+    transform:translateY(0);
+
+}
+
+/* ---------- Mobile Menu Items ---------- */
+
+.nav-links li{
+
+    width:100%;
+
+    margin:0;
 
 }
 
 .nav-links a{
 
-padding:10px 16px;
+    display:block;
 
-font-size:.9rem;
+    width:100%;
+
+    padding:14px 16px;
+
+    text-align:center;
+
+    background:rgba(255,255,255,.08);
+
+    border:1px solid rgba(255,255,255,.12);
+
+    border-radius:12px;
+
+    color:#fff;
+
+    font-size:1rem;
+
+    font-weight:600;
+
+    box-sizing:border-box;
+
+    transition:all .25s ease;
+
+}
+
+.nav-links a:hover{
+
+    background:rgba(255,255,255,.18);
 
 }
 
@@ -639,7 +759,7 @@ font-size:2rem;
 
     background:rgba(0,0,0,.60);
 
-    padding-bottom:80px;
+    padding-bottom:50px;
 
 }
 
@@ -664,3 +784,130 @@ font-size:2rem;
     }
 
 }
+
+/* ==================================================
+   MOBILE OPTIMISATION
+================================================== */
+
+@media (max-width:768px){
+
+    /* ---------- Chapter ---------- */
+
+    .chapter{
+
+        margin:40px 20px;
+
+        border-radius:20px;
+
+    }
+
+    /* ---------- Banner ---------- */
+
+    .chapter-banner{
+
+        min-height:320px;
+
+    }
+
+    .chapter-banner-overlay{
+
+        min-height:320px;
+
+        padding:22px 20px;
+
+    }
+
+    /* ---------- Icon ---------- */
+
+    .story-icon{
+
+        width:48px;
+
+        height:48px;
+
+        margin-bottom:12px;
+
+    }
+
+    /* ---------- Title ---------- */
+
+    .chapter-banner h3{
+
+        font-size:2rem;
+
+        line-height:1.05;
+
+        margin-bottom:10px;
+
+    }
+
+    .chapter-subtitle{
+
+        font-size:1rem;
+
+        margin-bottom:16px;
+
+    }
+
+    /* ---------- Button ---------- */
+
+    .chapter-button{
+
+        padding:12px 30px;
+
+        font-size:1rem;
+
+    }
+
+    /* ---------- Story ---------- */
+
+    .chapter-content{
+
+        max-width:100%;
+
+        margin-top:30px;
+
+        padding:0 10px;
+
+    }
+
+    .chapter-content p{
+
+        font-size:1rem;
+
+        line-height:1.7;
+
+        margin-bottom:18px;
+
+        text-align:left;
+
+    }
+
+    .chapter-content blockquote{
+
+        font-size:1.5rem;
+
+        line-height:1.35;
+
+        margin:28px auto;
+
+        max-width:100%;
+
+    }
+
+    /* ---------- Active Chapter ---------- */
+
+.chapter.active .chapter-banner-overlay{
+
+    padding-bottom:20px;
+
+}
+
+.chapter.active .chapter-content{
+
+    margin-top:15px;
+
+}
+
+}
+
