@@ -380,3 +380,287 @@ font-size:2rem;
 }
 
 }
+
+/* ==================================================
+   VERSION 2.0 - STORY CHAPTER SYSTEM
+================================================== */
+
+/* ---------- Chapter ---------- */
+
+.chapter{
+
+    margin:70px auto;
+
+    border-radius:24px;
+
+    overflow:hidden;
+
+}
+
+/* ---------- Background Images ---------- */
+
+.chapter-one{
+
+    background-image:url("../images/story/chapter1.png");
+
+    background-size:cover;
+
+    background-position:center center;
+
+    background-repeat:no-repeat;
+
+}
+
+.chapter-two{
+
+    background-image:url("../images/story/chapter2.png");
+
+    background-size:cover;
+
+    background-position:center;
+
+    background-repeat:no-repeat;
+
+}
+
+.chapter-three{
+
+    background-image:url("../images/story/chapter3.png");
+
+    background-size:cover;
+
+    background-position:center;
+
+    background-repeat:no-repeat;
+
+}
+
+.chapter-four{
+
+    background-image:url("../images/story/chapter4.png");
+
+    background-size:cover;
+
+    background-position:center;
+
+    background-repeat:no-repeat;
+
+}
+
+/* ---------- Banner ---------- */
+
+.chapter-banner{
+
+    min-height:420px;
+
+}
+
+.chapter-banner-overlay{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:flex-start;
+
+    width:100%;
+
+    min-height:420px;
+
+    padding:60px;
+
+    text-align:center;
+
+    background:rgba(0,0,0,.35);
+
+    transition:background .5s ease;
+
+}
+
+/* ---------- Icon ---------- */
+
+.story-icon{
+
+    width:60px;
+
+    height:60px;
+
+    margin-bottom:30px;
+
+}
+
+/* ---------- Title ---------- */
+
+.chapter-banner h3{
+
+    color:#fff;
+
+    font-size:3.5rem;
+
+    margin-bottom:15px;
+
+}
+
+.chapter-subtitle{
+
+    color:#fff;
+
+    font-size:1.15rem;
+
+    margin-bottom:40px;
+
+}
+
+/* ---------- Button ---------- */
+
+.chapter-button{
+
+    padding:14px 38px;
+
+    border:none;
+
+    border-radius:999px;
+
+    background:white;
+
+    color:#222;
+
+    cursor:pointer;
+
+    font-size:1rem;
+
+    opacity:1;
+
+    transition:
+
+        opacity .35s ease,
+
+        transform .35s ease,
+
+        background .3s ease;
+
+}
+
+.chapter-button:hover{
+
+    transform:translateY(-3px);
+
+    background:#f2f2f2;
+
+}
+
+.chapter.active .chapter-button{
+
+    opacity:0;
+
+    transform:translateY(-25px);
+
+    pointer-events:none;
+
+}
+
+/* ---------- Story ---------- */
+
+.chapter-content{
+
+    display:none;
+
+    width:100%;
+
+    max-width:900px;
+
+    margin:70px auto 0;
+
+    animation:fadeIn .5s ease;
+
+}
+
+.chapter-content p{
+
+    color:white;
+
+    font-size:1.15rem;
+
+    line-height:2;
+
+    margin-bottom:28px;
+
+    text-align:left;
+
+}
+
+.chapter-content blockquote{
+
+    color:white;
+
+    font-size:2rem;
+
+    font-style:italic;
+
+    text-align:center;
+
+    margin:45px auto;
+
+    max-width:700px;
+
+}
+
+.chapter-content .highlight{
+
+    color:white;
+
+    font-size:1.35rem;
+
+    font-weight:bold;
+
+    text-align:center;
+
+}
+
+.chapter-content .ending{
+
+    text-align:center;
+
+    font-size:1.3rem;
+
+}
+
+/* ---------- Active ---------- */
+
+.chapter.active .chapter-content{
+
+    display:block;
+
+}
+
+.chapter.active .chapter-banner-overlay{
+
+    background:rgba(0,0,0,.60);
+
+    padding-bottom:80px;
+
+}
+
+/* ---------- Animation ---------- */
+
+@keyframes fadeIn{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(20px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
