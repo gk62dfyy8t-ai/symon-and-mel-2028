@@ -74,15 +74,35 @@ padding:120px 30px;
 }
 .story-header{text-align:center;margin-bottom:70px}
 .story-header h2{font-size:3.5rem;color:#0a5674}
-.story-header p{font-size:1.3rem;color:#666;line-height:1.8}
+.story-header p{
+    font-size:1.3rem;
+    color:#666;
+    line-height:1.8
+}
+.story-header::after{
+    content:"";
+    display:block;
+    width:120px;
+    height:3px;
+    background:#0b77b8;
+    margin:35px auto 0;
+    border-radius:999px;
+}
 .story-card{
-max-width:900px;
-margin:auto;
-background:#fff;
-padding:70px;
-border-radius:35px;
-box-shadow:0 20px 50px rgba(0,0,0,.12);
-line-height:2;
+    max-width:900px;
+    margin:70px auto;
+    padding:60px;
+    background:#fff;
+    border-radius:35px;
+    box-shadow:0 20px 50px rgba(0,0,0,.12);
+    transition:all .3s ease;
+    overflow:hidden;
+}
+
+.story-card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 30px 60px rgba(0,0,0,.18);
+    cursor:default;
 }
 .chapter-tag{
 display:inline-block;
@@ -93,14 +113,33 @@ color:#0b77b8;
 font-weight:bold;
 margin-bottom:20px;
 }
-.story-card h3{font-size:2.5rem;margin-bottom:30px}
-.story-card p{margin-bottom:22px;font-size:1.15rem}
+.story-card h3{
+    font-size:2.5rem;
+    margin-bottom:35px;
+    text-align:center;
+    color:#17384d;
+}
+.story-card p{
+    max-width:700px;
+    margin:0 auto 22px;
+    font-size:1.15rem;
+    line-height:1.9;
+    color:#355063;
+    text-align:left;
+}
+.story-icon{
+    width:60px;
+    height:60px;
+    display:block;
+    margin:0 auto 25px;
+}
 .story-card blockquote{
-font-size:2rem;
-font-style:italic;
-text-align:center;
-color:#0b77b8;
-margin:35px 0;
+    font-size:1.8rem;
+    font-style:italic;
+    text-align:center;
+    color:#0b77b8;
+    margin:45px auto;
+    max-width:600px;
 }
 .highlight{
 font-weight:bold;
@@ -119,6 +158,24 @@ font-size:1.25rem;
 margin-top:40px;
 }
 .section{padding:120px 30px;text-align:center}
+
+/* Story Card Themes */
+
+.chance-card{
+    background:#fdfaf5;
+}
+
+.player-card{
+    background:#eef6ff;
+}
+
+.family-card{
+    background:#faf7f2;
+}
+
+.proposal-card{
+    background:#f8fbff;
+}
 
 /* ===========================
    TABLET
