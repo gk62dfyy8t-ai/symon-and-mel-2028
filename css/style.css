@@ -251,13 +251,23 @@ padding:140px 30px 80px;
 
     border:none;
 
-    color:white;
+    color:#66ccff;
 
     font-size:2rem;
 
     cursor:pointer;
 
     z-index:1001;
+
+    text-shadow:0 0 10px rgba(102,204,255,.6);
+
+    transition:color .25s ease;
+
+}
+
+.menu-toggle:hover{
+
+    color:#8fdcff;
 
 }
 
@@ -514,6 +524,8 @@ font-size:2rem;
     border-radius:24px;
 
     overflow:hidden;
+
+    scroll-margin-top:95px;
 
 }
 
